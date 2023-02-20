@@ -1,7 +1,5 @@
 import { animateListItem, insertHTML } from './helpers';
 
-const modalOpenClasses = ['fixed', 'z-20', 'inset-0', 'm-auto', 'flex', 'items-center', 'justify-center'];
-
 export const listItemMouseOverHandler = ({ state }) => (e) => {
     e.stopPropagation();
     if (state.selectedItem) return;
@@ -58,9 +56,8 @@ export const onListItemClickHandler = ({ state, setState, $ }) => (e) => {
 
     // transform the list item into modal
     const $listItem = e.target;
-    // $listItem.classList.add(...modalOpenClasses);
     $listItem.classList.replace('list-li-item', 'list-item-modal');
-    $listItem.animate([{ height: '2.5rem' }, { height: '15rem' }], { duration: 200, fill: 'forwards', });
+    $listItem.animate([{ height: '3.5rem' }, { height: '15rem' }], { duration: 200, fill: 'forwards', });
     $listItem.animate([{ width: '24rem' }, { width: '30rem' }], { duration: 200, fill: 'forwards', });
     $listItem.innerHTML = '';
     insertHTML($listItem, `Pop-up view for ${state.selectedItem + 1}`);
@@ -83,13 +80,12 @@ export const onOverlayClickHandler = ({ state, setState, $ }) => (e) => {
     // revert from popup modal to list item
     $listItem.innerHTML = '';
     $listItem.animate([{ opacity: '1' }, { opacity: '0' }], { duration: 300, fill: 'forwards' });
-    $listItem.animate([{ height: '15rem' }, { height: '2.5rem' }], { duration: 300, fill: 'forwards' });
+    $listItem.animate([{ height: '15rem' }, { height: '3.5rem' }], { duration: 300, fill: 'forwards' });
     $listItem.animate([{ width: '30rem' }, { width: '24rem' }], { duration: 300, fill: 'forwards' });
 
     // wait for animations to complete then reset innerHTML for list item and reset state
     setTimeout(() => {
         $listItem.animate([{ opacity: '0' }, { opacity: '1' }], { duration: 300, fill: 'forwards' });
-        // $listItem.classList.remove(...modalOpenClasses);
         $listItem.classList.replace('list-item-modal', 'list-li-item');
         insertHTML($listItem, `<span> ${state.selectedItem + 1}</span>`);
         setState("selectedItem", null);

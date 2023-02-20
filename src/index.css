@@ -2,8 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-a {
-  @apply text-blue-500 hover:text-blue-400 hover:underline transition-all;
+.action-button {
+  @apply flex-1 p-4 m-2 bg-purple-100 shadow-lg rounded-lg hover:bg-stone-200 font-bold text-gray-800 bg-stone-50;
+}
+
+.action-button .disabled {
+  @apply flex-1 p-4 m-2 bg-purple-100 shadow-lg rounded-lg hover:bg-stone-200 font-bold text-gray-800 bg-stone-50;
 }
 
 .list-li-item {

@@ -89,4 +89,5 @@ const App = {
 
 }
 
+// Initialize
 App.init();
