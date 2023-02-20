@@ -3,6 +3,7 @@
 Live Demo [link](https://vanilla-js-list.vercel.app/)
 
 This project uses **Vanilla JS** for DOM manipulation to create a list with some interactions. 
+
 **Features:**
 - Add and remove list items upto 100, after which additions are disabled.
 - Hover animations on list items and immediately adjacent siblings.
