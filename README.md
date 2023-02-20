@@ -44,6 +44,14 @@ This project uses **Vanilla JS** for DOM manipulation to create a list with some
    - 📄 [yarn.lock](yarn.lock)
 ```
 
+### Browsers supported
+
+| Name    | Operating System | Device type |
+| ------------- | ------------- | ------------- |
+| Chrome  | Windows  | Desktop  |
+| Chrome  | Mac OS  | Desktop  |
+
+
 ### Requirements
 
 #### Yarn
