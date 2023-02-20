@@ -24,8 +24,9 @@ export const listItemMouseOutHandler = () => (e) => {
     animateListItem(nextElement, 0, 100);
 }
 
-export const removeButtonHandler = ({ $: { list }, removeListClickListener, removeListItemHoverListener, setState, state }) => (e) => {
+export const removeButtonHandler = ({ $: { list, addButton }, removeListClickListener, removeListItemHoverListener, setState, state }) => (e) => {
     e.stopPropagation();
+    addButton.classList.replace('disabled-button', 'action-button');
     removeListClickListener(list.lastChild);
     removeListItemHoverListener(list.lastChild);
     list.removeChild(list.lastChild);
@@ -36,7 +37,10 @@ export const addButtonHandler = ({ $, createListItem, state, setState }) => (e) 
     e.stopPropagation();
     const { list } = $;
     const listChildLength = list.childNodes.length;
-    if (listChildLength > 100) return;
+    // stop pointer events when button presses 99th time
+    if (listChildLength === 99) {
+        $.addButton.classList.replace('action-button', 'disabled-button');
+    }
     const newRowElement = createListItem(listChildLength);
     newRowElement.animate([{ opacity: 0 }, { opacity: 1, easing: 'ease-in' }], 100);
     newRowElement.animate([{ transform: 'translate(-20px)' }, { transform: 'translate(0px)' }], 100);

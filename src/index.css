@@ -6,8 +6,8 @@
   @apply flex-1 p-4 m-2 bg-purple-100 shadow-lg rounded-lg hover:bg-stone-200 font-bold text-gray-800 bg-stone-50;
 }
 
-.action-button .disabled {
-  @apply flex-1 p-4 m-2 bg-purple-100 shadow-lg rounded-lg hover:bg-stone-200 font-bold text-gray-800 bg-stone-50;
+.disabled-button {
+  @apply flex-1 p-4 m-2 bg-purple-100 shadow-lg rounded-lg hover:bg-stone-200 font-bold text-gray-500 bg-stone-200 pointer-events-none;
 }
 
 .list-li-item {
