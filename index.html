@@ -8,19 +8,19 @@
   <title>Vanilla JS List</title>
 </head>
 
-<body>
+<body class="bg-neutral-700">
   <div id="app"
-    class="flex min-h-screen flex-col items-center justify-ceenter selection:bg-purple-300 w-full bg-purple-400 relative">
-    <div class="hidden absolute inset-0 bg-gray-900 opacity-80 z-10" data-list="overlay">
+    class="flex min-h-screen flex-col items-center selection:bg-purple-300 w-full relative">
+    <div class="hidden absolute inset-0 bg-neutral-900 opacity-80 z-10" data-list="overlay">
     </div>
     <div class="flex w-1/2 max-w-2xl">
       <!-- Action Buttons [+] [-] -->
       <div class="flex flex-col mt-20 h-24">
-        <button class="flex-1 p-4 m-2 bg-purple-100 shadow-lg rounded-lg hover:bg-gray-100 font-bold text-gray-800"
+        <button class="flex-1 p-4 m-2 bg-purple-100 shadow-lg rounded-lg hover:bg-stone-200 font-bold text-gray-800 bg-stone-50"
           data-list="add-row">
           +
         </button>
-        <button class="flex-1 p-4 m-2 bg-purple-100 shadow-lg rounded-lg hover:bg-gray-100 font-bold text-gray-800"
+        <button class="flex-1 p-4 m-2 bg-purple-100 shadow-lg rounded-lg hover:bg-stone-200 font-bold text-gray-800 bg-stone-50"
           data-list="remove-row">
           -
         </button>

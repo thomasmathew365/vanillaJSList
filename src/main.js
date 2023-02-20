@@ -56,7 +56,7 @@ const App = {
     // Func takes id and generates an empty row 
     createListItem(id) {
         const li = document.createElement("li");
-        li.classList.add('flex-1', 'p-4', 'm-2', 'bg-purple-100', 'shadow-lg', 'rounded-lg', 'cursor-pointer', 'h-10', 'w-96');
+        li.classList.add('list-li-item');
         li.dataset.id = id;
         insertHTML(li, listContent(id + 1));
         // hover and onClick events

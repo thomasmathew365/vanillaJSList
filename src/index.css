@@ -5,3 +5,11 @@
 a {
   @apply text-blue-500 hover:text-blue-400 hover:underline transition-all;
 }
+
+.list-li-item {
+  @apply flex-1 p-4 m-2 shadow-lg rounded-lg cursor-pointer h-10 w-96 bg-stone-50 max-h-14
+}
+
+.list-item-modal {
+  @apply fixed z-20 inset-0 m-auto flex items-center justify-center shadow-lg rounded-lg bg-stone-50
+}

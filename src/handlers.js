@@ -58,7 +58,8 @@ export const onListItemClickHandler = ({ state, setState, $ }) => (e) => {
 
     // transform the list item into modal
     const $listItem = e.target;
-    $listItem.classList.add(...modalOpenClasses);
+    // $listItem.classList.add(...modalOpenClasses);
+    $listItem.classList.replace('list-li-item', 'list-item-modal');
     $listItem.animate([{ height: '2.5rem' }, { height: '15rem' }], { duration: 200, fill: 'forwards', });
     $listItem.animate([{ width: '24rem' }, { width: '30rem' }], { duration: 200, fill: 'forwards', });
     $listItem.innerHTML = '';
@@ -88,7 +89,8 @@ export const onOverlayClickHandler = ({ state, setState, $ }) => (e) => {
     // wait for animations to complete then reset innerHTML for list item and reset state
     setTimeout(() => {
         $listItem.animate([{ opacity: '0' }, { opacity: '1' }], { duration: 300, fill: 'forwards' });
-        $listItem.classList.remove(...modalOpenClasses);
+        // $listItem.classList.remove(...modalOpenClasses);
+        $listItem.classList.replace('list-item-modal', 'list-li-item');
         insertHTML($listItem, `<span> ${state.selectedItem + 1}</span>`);
         setState("selectedItem", null);
     }, 300);
