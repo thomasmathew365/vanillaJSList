@@ -24,7 +24,7 @@ const App = {
 
     state: {
         selectedItem: null,
-        list: Array.from(Array(90).keys())
+        list: Array.from(Array(10).keys())
     },
 
     setState(key, value) {
