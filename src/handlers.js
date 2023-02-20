@@ -1,4 +1,4 @@
-import { animateListItem } from './helpers';
+import { animateListItem, insertHTML } from './helpers';
 
 const modalOpenClasses = ['fixed', 'z-20', 'inset-0', 'm-auto', 'flex', 'items-center', 'justify-center'];
 
