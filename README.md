@@ -44,6 +44,13 @@ This project uses **Vanilla JS** for DOM manipulation to create a list with some
    - 📄 [yarn.lock](yarn.lock)
 ```
 
+### Requirements
+
+#### Yarn
+```
+$ npm install --global yarn
+```
+
 ### Scripts
 #### Run Dev Server
 ```
