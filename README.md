@@ -1,6 +1,6 @@
 ## Vanilla Js List
 
-Live Demo [link](https://vanilla-js-list.vercel.app/)
+### Live Demo [link](https://vanilla-js-list.vercel.app/)
 
 This project uses **Vanilla JS** for DOM manipulation to create a list with some interactions. 
 
