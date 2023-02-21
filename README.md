@@ -18,7 +18,6 @@ This project uses **Vanilla JS** for DOM manipulation to create a list with some
 - **Yarn** for package management
 
 ### Folder Structure
-```
 - 📂 __project__
    - 📄 [README.md](README.md)
    - 📂 __assets__
@@ -37,7 +36,6 @@ This project uses **Vanilla JS** for DOM manipulation to create a list with some
      - 📄 [main.js](src/main.js)
    - 📄 [tailwind.config.js](tailwind.config.js)
    - 📄 [yarn.lock](yarn.lock)
-```
 
 ### Browsers supported
 
